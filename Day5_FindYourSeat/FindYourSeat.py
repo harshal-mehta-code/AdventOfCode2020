@@ -30,6 +30,7 @@ def rangeDissector(lowLetter,highLetter,currentLetter,lowVal,highVal):
 def findMissingSeatId(seatIDs):
     seatIDs.sort()
     return (set(range(seatIDs[0],seatIDs[-1]+1))-set(seatIDs))
+    
 if __name__ == "__main__":
     with open('input.txt') as f:
         boardingPasses = [line.rstrip() for line in f]
