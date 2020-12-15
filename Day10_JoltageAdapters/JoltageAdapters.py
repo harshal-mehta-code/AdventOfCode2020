@@ -41,6 +41,6 @@ if __name__ == "__main__":
     joltAdapterList = [0] + joltAdapterList + [max(joltAdapterList)+3] 
     joltDifferences = CalculateJoltDifferences(joltAdapterList)
     print(joltDifferences[1],joltDifferences[3])
-    ditchableAdapters = getAllDitchableAdapters(joltAdapterList)
+
     numSeq,Seqs = getNumberOfValidAdapterSequences(joltAdapterList,ditchableAdapters)
     print(len(Seqs))
