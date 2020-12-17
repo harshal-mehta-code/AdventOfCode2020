@@ -1,3 +1,4 @@
+import time
 class Game:
     def __init__(self,initialNumbers):
         self.Bank = {}
@@ -28,9 +29,11 @@ class Game:
         
 
 if __name__ == "__main__":
+    startTime = time.time()
     with open('input.txt') as f:
         numbers = [i for i in f.readline().rstrip().split(',')]
 
     g = Game(numbers)
     g.playGameUntilTurnNumber(30000000)
     print(g.getNumberAtTurn(30000000))
+    print("Took "+ str(time.time()-startTime) + "to run")
